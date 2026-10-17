@@ -1,0 +1,8 @@
+<Application x:Class="KeyboardTouchpadLock.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             ShutdownMode="OnExplicitShutdown">
+    <!-- ShutdownMode="OnExplicitShutdown": this is a tray-resident app with no
+         main window, so WPF must not exit just because no window is open.
+         The app only closes when the user picks "Exit" from the tray menu. -->
+</Application>

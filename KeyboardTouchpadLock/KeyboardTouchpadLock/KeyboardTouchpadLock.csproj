@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- No static .ico file is required: the tray/app icon is generated at runtime
+         by Services/IconFactory.cs so the icon always matches the live lock state.
+         If you want a fixed .exe icon in Explorer too, drop an app.ico into
+         Resources\ and uncomment the line below. -->
+    <!-- <ApplicationIcon>Resources\app.ico</ApplicationIcon> -->
+    <AssemblyName>KeyboardTouchpadLock</AssemblyName>
+    <RootNamespace>KeyboardTouchpadLock</RootNamespace>
+
+    <!-- High-DPI awareness is also declared in app.manifest -->
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+
+
+    <SelfContained>false</SelfContained>
+    
+<PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Toast notifications (Windows 10/11 native toasts for classic desktop apps) -->
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.3" />
+  </ItemGroup>
+
+</Project>
